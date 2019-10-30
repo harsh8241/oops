@@ -11,11 +11,11 @@ class name_ad
 
    private:
 
-    char address[10];
+    char address[80];
 
 
    public:
-    char name[10];
+    char name[25];
     int idno;
 
     void get1(void)
@@ -137,7 +137,7 @@ void numbers::s2(void)
 
 //=====================================================================
 
-class reminder:public name_ad
+class reminder:public numbers
 {
    private:
       char pr[10];
@@ -200,8 +200,13 @@ void reminder::s3()
 }
 
 //=========================================================================
+class abstClass{
+       virtual void get4(void)=0;
+       virtual void display4(void)=0;
+       virtual void s4(void)=0;
+};
 
-class office:public name_ad
+class office:public name_ad, public abstClass
 {
   private:
        char c[20];
@@ -354,8 +359,7 @@ int main()
   routine t[10];
 
   fstream file;
-  file.open("information",ios::out|ios::in);
-
+  file.open("info.txt",ios::out|ios::in);
 
   cout<<"\n\n*#*#*#*  THIS IS PERSONAL INFORMATION MANAGEMENT  *#*#*#*#*"<<"\n\n";
   cout<<"\n\nHow many people's information you want to management?\n";
