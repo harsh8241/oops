@@ -32,7 +32,7 @@ class name_ad
 
       cout<<"\nAddress of your residence :";
      cin>>address;
-      file<<address<<"\n";
+      file<<address<<" "<<endl;
       cout<<endl;
     }
 
@@ -124,7 +124,7 @@ void numbers::get2(void)
    cin>>c_no;
    cout<<"\n Car resistration no:";
    cin>>r_no;
- file1<<name<<" "<<idno<<" "<<res_tele<<" "<<b_group<<" "<<i_card<<" "<<acc_no<<" "<<t_no<<" "<<c_no<<" "<<r_no<<" ";
+ file1<<name<<" "<<idno<<" "<<res_tele<<" "<<b_group<<" "<<i_card<<" "<<acc_no<<" "<<t_no<<" "<<c_no<<" "<<r_no<<" "<<endl;
  cout<<endl;
 
 
@@ -199,7 +199,7 @@ class reminder:public numbers
    public:
       void get3();
       void display3();
-      void s3();
+
 
 }
 ;
@@ -223,7 +223,7 @@ void reminder::get3()
   cin>>id;
   cout<<"\n\n Medical check-up                  :";
   cin>>mc;
-file2<<name<<" "<<idno<<" "<<pr<<" "<<ir<<" "<<dr<<" "<<id<<" "<<mc<<" ";
+file2<<name<<" "<<idno<<" "<<pr<<" "<<ir<<" "<<dr<<" "<<id<<" "<<mc<<" "<<endl;
 cout<<endl;
 }
 
@@ -315,7 +315,7 @@ fstream file3;
    cin>>mob;
    cout<<"\n\nFax                            :";
    cin>>fax;
-file3<<name<<" "<<idno<<" "<<c<<" "<<ad1<<" "<<tel<<" "<<mob<<" "<<fax<<" ";
+file3<<name<<" "<<idno<<" "<<c<<" "<<ad1<<" "<<tel<<" "<<mob<<" "<<fax<<" "<<endl;
 cout<<endl;
 }
 
@@ -388,9 +388,7 @@ void routine::get5()
        cout<<endl;
        cout<<"\n And the ID no         :";
        cin>>idno;
-  cout<<"\n  Enter your Routine of The Week :(Time)-Plan***(Time)-Plan....";
-  cout<<"\nSunday    :";
-  cin>>sunday;
+  cout<<"\n  Enter your Routine of The Weekdays :(Time)-Plan***(Time)-Plan....";
   cout<<endl;
   cout<<"\nMonday    :";
   cin>>monday;
@@ -407,10 +405,8 @@ void routine::get5()
   cout<<"\nFriday    :";
   cin>>friday;
   cout<<endl;
-  cout<<"\nSaturday  :";
-  cin>>saturday;
 
-file4<<name<<" "<<idno<<" "<<sunday<<" "<<monday<<" "<<tuesday<<" "<<wednesday<<" "<<thursday<<" "<<friday<<" "<<saturday<<" ";
+file4<<name<<" "<<idno<<" "<<monday<<" "<<tuesday<<" "<<wednesday<<" "<<thursday<<" "<<friday<<" "<<endl;
 cout<<endl;
 }
 
@@ -419,7 +415,7 @@ void routine::display5()
      file4.open("info4.txt",ios::out|ios::in);
     string line;
 
-   string arr[7];
+   string arr[9];
     string s;
     int k=0;
   while(getline(file4,line)){
@@ -442,25 +438,22 @@ void routine::display5()
   }
   name=arr[0];
        idno=arr[1];
-       sunday=arr[2];
-       monday=arr[3];
-       tuesday=arr[4];
-       wednesday=arr[5];
-       thursday=arr[6];
-       friday=arr[7];
-       saturday=arr[8];
+       monday=arr[2];
+       tuesday=arr[3];
+       wednesday=arr[4];
+       thursday=arr[5];
+       friday=arr[6];
 
   cout<<"\n**************************************************************";
-  cout<<"\n  Routine of The Week :";
+ // cout<<"\n  Routine of The Week :";
   cout<<"\n  Name     :"<<name<<endl;
   cout<<"\n  ID no    :"<<idno<<endl;
-  cout<<"\n  Sunday   :"<<sunday<<endl;
+  cout<<"\n  Routine for weekdays   :";
   cout<<"\n  Monday   :"<<monday<<endl;
   cout<<"\n  Tuesday  :"<<tuesday<<endl;
   cout<<"\n  Wednesday:"<<wednesday<<endl;
   cout<<"\n  Thursday  :"<<thursday<<endl;
   cout<<"\n  Friday   :"<<friday<<endl;
-  cout<<"\n  Saturday :"<<saturday<<endl;
   cout<<"\n**************************************************************\n";
   }
 }
@@ -482,7 +475,10 @@ int main()
   routine t[10],t1;
 
   cout<<"\n\n*#*#*#*  THIS IS PERSONAL INFORMATION MANAGEMENT  *#*#*#*#*"<<"\n\n";
-  cout<<"\n\nHow many people's information you want to management?\n";
+
+  cout<<"\n\n Made by Harsh and Sakshi\n";
+
+  cout<<"\n\nHow many people's information you want to manage?\n";
 
   cin>>a;
   int x;
@@ -506,7 +502,7 @@ int main()
       <<"\n*******************************************\n";
 
    cin>>x;
-
+system("cls");
    switch(x)
    {
 
@@ -528,7 +524,7 @@ int main()
   case 3:
      for(i=0;i<a;i++)
     {
-      cout<<"\nEnter the Important numbers :"<<i+1<<"\n\n";
+      cout<<"\nEnter the Important numbers "<<i+1<<"\n\n";
       b[i].get2();
 
     }
@@ -546,13 +542,13 @@ int main()
   case 5:
       for(i=0;i<a;i++)
     {
-       cout<<"\nEnter What you want to remind for"<<i+1<<"?"<<"\n\n";
+       cout<<"\nEnter What you want to remind for"<<i+1<<"\n\n";
        r[i].get3();
     }
 
   break;
   case 6:
-        cout<<"\nThe Reminders for"<<i+1<<"\n\n";
+        cout<<"\nThe Reminders for"<<"\n\n";
 
         r1.display3();
 
@@ -563,7 +559,7 @@ int main()
   case 7:
        for(i=0;i<a;i++)
       {
-        cout<<"\nEnter the Information Of the working place for"<<"\n\n";
+        cout<<"\nEnter the Information Of the working place "<<"\n\n";
         o[i].get4();
 
       }
@@ -571,7 +567,7 @@ int main()
 
   case 8:
 
-       cout<<"\nThe Information of Working Place of" <<"\n\n";
+       cout<<"\nThe Information of Working Place " <<"\n\n";
        o1.display4();
 
   break;
