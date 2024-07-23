@@ -161,13 +161,13 @@ void numbers::get2()
    cout<<"\n\n  Please,Enter your important numbers:\n";
   cout<<"\n Name                :";
   cin>>name;
-   cout<<"\n ID no               :";
+   cout<<"\n Id no               :";
    cin>>idno;
    cout<<"\n Res. Telephone     : ";
    cin>>res_tele;
    cout<<"\n Blood Group        :";
    cin>>b_group;
-   cout<<"\n identity card no   :";
+   cout<<"\n Identity card no   :";
    cin>>i_card;
    cout<<"\n Bank Account no    :";
    cin>>acc_no;
@@ -175,7 +175,7 @@ void numbers::get2()
   cin>>t_no;
    cout<<"\n Credit card no     :";
    cin>>c_no;
-  cout<<"\n Car resistration no:";
+  cout<<"\n Car Registration no:";
    cin>>r_no;
 }
 
@@ -185,14 +185,14 @@ void numbers::display2()
 {
    cout<<"\n***********************************************";
    cout<<"\n\n  Name               :"<<name<<endl;
-    cout<<"\n\n  ID No              :"<<idno<<endl;
-    cout<<"\n\n  Res telephone no   :"<<res_tele<<endl;
+    cout<<"\n\n  Id No              :"<<idno<<endl;
+    cout<<"\n\n  Registeres telephone no   :"<<res_tele<<endl;
    cout<<"\n\n  Blood group        :"<<b_group<<endl;
    cout<<"\n\n  Identity Card no   :"<<i_card<<endl;
    cout<<"\n\n  Bank account no    :"<<acc_no<<endl;
    cout<<"\n\n  Income tax no      :"<<t_no<<endl;
    cout<<"\n\n  Credit card no     :"   <<c_no<<endl;
-   cout<<"\n\n  Car resistration no:"<<r_no<<endl;
+   cout<<"\n\n  Car Registration no:"<<r_no<<endl;
    cout<<"\n************************************************\n";
 }
 int numbers:: id()
